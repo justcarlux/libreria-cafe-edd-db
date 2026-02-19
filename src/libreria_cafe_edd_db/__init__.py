@@ -11,6 +11,7 @@ from .model.orden_reposicion import OrdenReposicion
 from .model.proveedor import Proveedor
 from .model.recomendacion_libro import RecomendacionLibro
 from .model.venta import Venta
+from .model.cafe import Cafe
 from .sesion import crear_sesion, establecer_logs
 
 __all__ = [
@@ -27,6 +28,7 @@ __all__ = [
     "Proveedor",
     "RecomendacionLibro",
     "Venta",
+    "Cafe",
     "crear_sesion",
     "establecer_logs"
 ]
