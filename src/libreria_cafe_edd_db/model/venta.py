@@ -3,13 +3,15 @@ from sqlalchemy.orm import Mapped, mapped_column, relationship
 from .enum.tipo_venta import TipoVenta
 from .base import Base
 from typing import TYPE_CHECKING
+from datetime import date
 
 if TYPE_CHECKING:
     from .factura import Factura
 
+
 class Venta(Base):
     __tablename__ = 'venta'
-    
+
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     cantidad: Mapped[int] = mapped_column()
     precio: Mapped[float] = mapped_column()
@@ -17,5 +19,6 @@ class Venta(Base):
     tipo: Mapped[TipoVenta] = mapped_column(Enum(TipoVenta))
     id_producto: Mapped[int] = mapped_column()
     id_factura: Mapped[int] = mapped_column(ForeignKey('factura.id'))
-    
+    fecha: Mapped[date] = mapped_column()
+
     factura: Mapped["Factura"] = relationship(back_populates="ventas")
