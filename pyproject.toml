@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "libreria-cafe-edd-db"
-version = "1.0.5"
+version = "1.0.6"
 description = "Librería para manejar una base de datos relacional SQLite entre todos los módulos del proyecto final de Estructuras de Datos de manera consistente."
 authors = [{ name = "justcarlux" }]
 license = "MIT"
