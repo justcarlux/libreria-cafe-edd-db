@@ -9,3 +9,4 @@ class Cafe(Base):
     nombre: Mapped[str] = mapped_column(String(255))
     description: Mapped[str] = mapped_column(String(2048))
     precio: Mapped[float] = mapped_column()
+    stock: Mapped[int] = mapped_column()
